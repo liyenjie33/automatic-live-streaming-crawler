@@ -1,0 +1,1 @@
+{"pic_data-original":["pic","data-original"],"image":["pic","src"],"title":["title,new-clickstat,j","live-card","report"],"tag-right_text":["tag-right","text"],"url":["title,new-clickstat,j","live-card","href"],"viewer":["num","text"],"avatar,fl_text":["avatar,fl","text"],"category":["game-type,fr","text"],"block":"game-live-item"}

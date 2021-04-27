@@ -1,0 +1,1 @@
+{"content_text":["content","text"],"gui-list-bg_style":["gui-list-bg","style"],"title":["info-livename","text"],"name_text":["name","text"],"viewer":["popular","text"],"block":"gui-list-normal,gui-list-percent"}

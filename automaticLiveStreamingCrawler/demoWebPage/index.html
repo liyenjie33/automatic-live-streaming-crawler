@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Wishing Pocket</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="img/myIcon/ecology-and-environment.svg" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
+
+  <!-- Bootstrap css -->
+  <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.theme.default.min.css" rel="stylesheet">
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/modal-video/css/modal-video.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <script>
+    //Before and After Comparison URL
+    var bilibili_beforeAfter = ['https://api.live.bilibili.com/room/v1/room/get_user_recommend?page=2', 'https://api.live.bilibili.com/area/dynamic?area=all', 'https://api.live.bilibili.com/room/v1/room/get_user_recommend?page=3'];
+    var douyu_beforeAfter = ['https://www.douyu.com/room/follow/check/4238637', 'https://passport.douyu.com/lapi/passport/iframe/safeAuth?client_id=93&did=&t=1588422883987&callback=jsonp_1588422883987_22213', 'https://www.douyu.com/ggwapi/rnc/mgeticon10?rids=1719183,7129236,142488,221741,3984748,72751&client_sys=web', 'https://www.douyu.com/ggwapi/rnc/mgeticon10?rids=2433239,4372875,3284257,2314338,4918532,7743668,6212206,2205764&client_sys=web', 'https://www.douyu.com/japi/bdrcm/apinc/searchWordRec', 'https://www.douyu.com/ajax_api_cache/header/cate', 'https://www.douyu.com/ggwapi/rnc/mgeticon10?rids=3794905,138243,709710,4926715,3606468,3652542,5878647,5720533,19002,7874579,8401091,4196725&client_sys=web', 'https://www.douyu.com/ggwapi/rnc/mgeticon10?rids=14163,701990,6210028,6499690,1984839,834093,3086159,2127419,787579&client_sys=web', 'https://www.douyu.com/ggwapi/rnc/mgeticon10?rids=5390681,8667622,1811143,3857053,1981932,2124270,2311698,101367,1203352,88660,952595,4921614,5602920&client_sys=web', 'https://g.wan.douyu.com/direct_media/call_back?/cb/1/1259/237.html?frm=sy-lb-tips', 'https://www.douyu.com/ggwapi/rnc/mgeticon10?rids=288016,999,1863767,276685,911,5524515,4615502,2947432,36252,6867600,100,9999,793400,5063899,1457640,312212&client_sys=web', 'https://msg.douyu.com/web/index.html?t=1588422882724&close=1', 'https://www.douyu.com/japi/weblist/apinc/rec/list?uid=0&num=10', 'https://www.douyu.com/ggwapi/rnc/mgeticon10?rids=6558897,5472749,2448877,60937,30,4749583,32892,296059,52876,3148043,110,6442973,6635385&client_sys=web', 'https://playweb.douyucdn.cn/lapi/live/hlsH5Preview/4238637?158842288759659650', 'https://www.douyu.com/gapi/rkc/directory/c_tag/0_0/list', 'https://playweb.douyucdn.cn/lapi/live/hlsH5Preview/7797775?158842288426214300', 'https://www.douyu.com/ggwapi/rnc/mgeticon10?rids=633019,241431,6550676,3354636,74960,1433223,257301,5389581&client_sys=web', 'https://www.douyu.com/gapi/rkc/directory/mixList/0_0/3', 'https://www.douyu.com/ggwapi/rnc/mgeticon10?rids=3811559,1883821,115280,3507497,3834275,5175512,2134331,69190,2461752,1589636&client_sys=web', 'https://www.douyu.com/gapi/rkc/directory/mixList/0_0/2', 'https://www.douyu.com/wgapi/livenc/liveweb/follow/top3', 'https://www.douyu.com/lapi/athena/room/newShow', 'https://www.douyu.com/room/follow/check/7797775'];
+    var huajiao_beforeAfter = ['https://webh.huajiao.com/live/listcategory?_callback=jQuery1102046139560728850193_1588423822252&cateid=1000&offset=50&nums=20&fmt=jsonp&_=1588423822254', 'https://webh.huajiao.com/live/listcategory?_callback=jQuery1102046139560728850193_1588423822252&cateid=1000&offset=70&nums=20&fmt=jsonp&_=1588423822255']
+    var ink_beforeAfter = ['http://www.inke.cn/hotlive_list.html?page=2', 'http://www.inke.cn/hotlive_list.html?page=3']
+    var zhanqi_beforeAfter = ['https://www.zhanqi.tv/api/static/v2.1/live/list/20/3.json', 'https://www.zhanqi.tv/api/static/v2.1/live/list/20/4.json', 'https://www.zhanqi.tv/api/static/v2.1/live/list/20/2.json']
+    var huya_beforeAfter = ['https://metric.huya.com/?ts=1588423103768', 'https://udblgn.huya.com/proxy.html', 'https://www.huya.com/cache.php?m=LiveList&do=getLiveListByPage&tagAll=0&page=2', 'https://cdnweb.huya.com/getUidsDomainList?callback=getLiveStreamDomainCallback_1542219045&client_uid=0&gid=&huya_ua=web&anchor_uid=1259517692680,352961616,1620912493,1080469851,1666208523,1610847180,7223465,60006210,2274093904,175283017', 'https://cdnweb.huya.com/getUidsDomainList?callback=getLiveStreamDomainCallback_1400253968&client_uid=0&gid=&huya_ua=web&anchor_uid=1199535281869,1016605197,1199517454001,2285232959,2396689709,20320130,1861606916,718669953,1199518269910,1687773491', 'https://metric.huya.com/?ts=1588423103776', 'https://cdnweb.huya.com/getUidsDomainList?callback=getLiveStreamDomainCallback_986357813&client_uid=0&gid=&huya_ua=web&anchor_uid=1199512520419,1868880236,764268514,1199526829883,2303168590,1355170635,1500728851,1423782096,1199514375200,1626313909', 'https://cdnweb.huya.com/getUidsDomainList?callback=getLiveStreamDomainCallback_2023337861&client_uid=0&gid=&huya_ua=web&anchor_uid=1420816766,1099531728403,1394565191,1141467271,2243787160,1338576002,1678113423,950936471,1199517668903,61816601', 'https://metric.huya.com/?ts=1588423110980', 'https://metric.huya.com/?ts=1588423112270', 'https://www.huya.com/cache.php?m=LiveList&do=getLiveListByPage&tagAll=0&page=3', 'https://liveapi.huya.com/moment/getCommentList?callback=jQuery111107592964834662005_1588423099658&uid=0&parentId=6821833612253845233&momId=6821833612253845233&isGetHotComment=0&_=1588423099660', 'https://metric.huya.com/?ts=1588423116883', 'https://metric.huya.com/?ts=1588423115501', 'https://cdnweb.huya.com/getUidsDomainList?callback=getLiveStreamDomainCallback_179075015&client_uid=0&gid=&huya_ua=web&anchor_uid=1591942650,15442384,1388474069,2203726980,1199526939787,1173538624,167932543,1259512907154,1419251590,1455428964', 'https://udblgn.huya.com/web/cookieExchange', 'https://cdnweb.huya.com/getUidsDomainList?callback=getLiveStreamDomainCallback_538907701&client_uid=0&gid=&huya_ua=web&anchor_uid=1580231303,1061583819,1674470414,1199518973888,2363651893,1696012317,2349519,2254612871,1164713264,1512791977']
+    var penguin_beforeAfter =  ['https://share.egame.qq.com/cgi-bin/pgg_live_async_fcgi?param={"key":{"module":"pgg_live_read_ifc_mt_svr","method":"get_pc_live_list","param":{"appid":"hot","page_num":2,"page_size":40,"tag_id":0,"tag_id_str":""}}}&app_info={"platform":4,"terminal_type":2,"egame_id":"egame_official","imei":"","version_code":"9.9.9.9","version_name":"9.9.9.9","ext_info":{"_qedj_t":"","ALG-flag_type":"","ALG-flag_pos":""},"pvid":"672094208020050220"}&g_tk=&pgg_tk=&tt=1&_t=1588423998979', 'https://share.egame.qq.com/cgi-bin/pgg_live_async_fcgi?param={"key":{"module":"pgg_live_read_ifc_mt_svr","method":"get_pc_live_list","param":{"appid":"hot","page_num":3,"page_size":40,"tag_id":0,"tag_id_str":""}}}&app_info={"platform":4,"terminal_type":2,"egame_id":"egame_official","imei":"","version_code":"9.9.9.9","version_name":"9.9.9.9","ext_info":{"_qedj_t":"","ALG-flag_type":"","ALG-flag_pos":""},"pvid":"672094208020050220"}&g_tk=&pgg_tk=&tt=1&_t=1588424000328']
+
+    //Path Comparison Filter URL
+    var bilibili_pathComparison = ['https://api.live.bilibili.com/room/v1/room/get_user_recommend?page=2', 'https://api.live.bilibili.com/room/v1/room/get_user_recommend?page=3']
+    var douyu_pathComparison = []
+    var huajiao_pathComparison = ['https://webh.huajiao.com/live/listcategory?_callback=jQuery1102046139560728850193_1588423822252&cateid=1000&offset=50&nums=20&fmt=jsonp&_=1588423822254', 'https://webh.huajiao.com/live/listcategory?_callback=jQuery1102046139560728850193_1588423822252&cateid=1000&offset=70&nums=20&fmt=jsonp&_=1588423822255']
+    var ink_pathComparison =  ['http://www.inke.cn/hotlive_list.html?page=2', 'http://www.inke.cn/hotlive_list.html?page=3']
+    var zhanqi_pathComparison = []
+    var huya_pathComparison = ['https://www.huya.com/cache.php?m=LiveList&do=getLiveListByPage&tagAll=0&page=2', 'https://www.huya.com/cache.php?m=LiveList&do=getLiveListByPage&tagAll=0&page=3']
+    var penguin_pathComparison =  ['https://share.egame.qq.com/cgi-bin/pgg_live_async_fcgi?param={"key":{"module":"pgg_live_read_ifc_mt_svr","method":"get_pc_live_list","param":{"appid":"hot","page_num":2,"page_size":40,"tag_id":0,"tag_id_str":""}}}&app_info={"platform":4,"terminal_type":2,"egame_id":"egame_official","imei":"","version_code":"9.9.9.9","version_name":"9.9.9.9","ext_info":{"_qedj_t":"","ALG-flag_type":"","ALG-flag_pos":""},"pvid":"672094208020050220"}&g_tk=&pgg_tk=&tt=1&_t=1588423998979', 'https://share.egame.qq.com/cgi-bin/pgg_live_async_fcgi?param={"key":{"module":"pgg_live_read_ifc_mt_svr","method":"get_pc_live_list","param":{"appid":"hot","page_num":3,"page_size":40,"tag_id":0,"tag_id_str":""}}}&app_info={"platform":4,"terminal_type":2,"egame_id":"egame_official","imei":"","version_code":"9.9.9.9","version_name":"9.9.9.9","ext_info":{"_qedj_t":"","ALG-flag_type":"","ALG-flag_pos":""},"pvid":"672094208020050220"}&g_tk=&pgg_tk=&tt=1&_t=1588424000328']
+
+    //Response Content Filter URL
+    var zhanqi_responseContent = ['https://www.zhanqi.tv/api/static/v2.1/live/list/20/3.json', 'https://www.zhanqi.tv/api/static/v2.1/live/list/20/4.json', 'https://www.zhanqi.tv/api/static/v2.1/live/list/20/2.json']
+    var douyu_responseContent = []
+
+    var dataCollection = {"youtube":{"Title":"title", "Host":"hostName", "Viewers": "viewCount"}, "twitch":{"Title":"title", "Host":"hostName", "Viewers": "viewCount"}, "bilibili":{"Title":"title", "Host":"uname", "Viewers": "online"}, "huya":{"Title":"introduction", "Host":"nick", "Viewers": "totalCount"}, "zhanqi":{"Title":"title", "Host":"nickname", "Viewers": "online"},}
+
+
+
+    function showContent(x){
+      document.getElementById('content').innerText = '';
+      for (var i in x){
+        if (i!=(x.length-1)){
+          var j = parseInt(i)+1;
+          if(x[i].search('x_')==0){
+            x[i] = x[i].replace("x_", "");
+            $('#content').append('<span style="text-decoration:line-through; opacity:0.3; word-wrap:break-word;">'+j+'. '+x[i]+'</span><hr>')
+          }
+          else{
+            $('#content').append('<span style="word-wrap:break-word;">'+j+'. '+x[i]+'</span><hr>')
+          }
+        }
+        else{
+          var j = parseInt(i)+1;
+          if(x[i].search('x_')==0){
+            x[i] = x[i].replace("x_", "");
+            $('#content').append('<span style="text-decoration:line-through; opacity:0.3; word-wrap:break-word;">'+j+'. '+x[i]+'</span>')
+          }
+          else{
+            $('#content').append('<span style="word-wrap:break-word;">'+j+'. '+x[i]+'</span>')
+          }
+        }
+      }
+    }
+    function showApiDataAll(x){
+      document.getElementById('content').innerText = '';
+      for (var i in x){
+        x[i] = JSON.stringify(x[i]);
+        if (i!=(x.length-1)){
+          var j = parseInt(i)+1;
+          if(x[i].search('x_')==0){
+            x[i] = x[i].replace("x_", "");
+            $('#content').append('<span style="text-decoration:line-through; opacity:0.3; word-wrap:break-word;">'+j+'. '+x[i]+'</span><hr>')
+          }
+          else{
+            $('#content').append('<span style="word-wrap:break-word;">'+j+'. '+x[i]+'</span><hr>')
+          }
+        }
+        else{
+          var j = parseInt(i)+1;
+          if(x[i].search('x_')==0){
+            x[i] = x[i].replace("x_", "");
+            $('#content').append('<span style="text-decoration:line-through; opacity:0.3; word-wrap:break-word;">'+j+'. '+x[i]+'</span>')
+          }
+          else{
+            $('#content').append('<span style="word-wrap:break-word;">'+j+'. '+x[i]+'</span>')
+          }
+        }
+        x[i] = JSON.parse(x[i]);
+      }
+    }
+    function showApiDataPart(x, name){
+      $('#tableContent').bootstrapTable('destroy');
+      $('#tableContent').bootstrapTable({
+        data: x,
+        columns: [{
+          field: dataCollection[name].Title
+        },{
+          field: dataCollection[name].Host
+        },{
+          field: dataCollection[name].Viewers
+        }]
+      })
+    }
+    function showSeleniumData(name){
+      console.log(name)
+      window.x = []
+      $.ajax({
+          url: "http://localhost:3000/?platform="+name , //請求的url地址
+          dataType: "json", //返回格式為json
+          type: "GET", 
+          success: function(result) {
+            console.log('hi')
+            $('#seletable').bootstrapTable('destroy');
+            $("#seletable thead tr").html('');
+            if(result.length>1){
+              $.each(result[0], function(index, value) {
+                var tr = $('<th data-field="'+index+'">'+JSON.stringify(index)+'</th>');
+                $("#seletable thead tr").append(tr);
+              });
+              x = result;
+              $("#seletable").bootstrapTable({
+                data: x,
+                pagination : true,
+                pageSize : 10,
+              });
+            }
+            else{
+              console.log('only1')
+              $.each(result, function(index, value) {
+                var tr = $('<th data-field="'+index+'">'+JSON.stringify(index)+'</th>');
+                $("#seletable thead tr").append(tr);
+
+              });
+              x.push(result)
+              // for(var i in x){
+              //   x[i] = JSON.stringify(x[i]);
+              // }
+              $("#seletable").bootstrapTable({
+                data: x,
+              });
+            }
+          }
+      });  //ajax_out end
+    }
+  </script>
+
+  <!-- =======================================================
+    Theme Name: eStartup
+    Theme URL: https://bootstrapmade.com/estartup-bootstrap-landing-page-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
+</head>
+
+<body>
+
+  <!--==========================
+    more
+  ============================-->
+  <div class="modal fade bd-example-modal-lg" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+      <div class="modal-dialog" style="max-width: 70%;" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle" style="font-family: monospace; font-weight: bold;">Detail Information</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div id="content" style="font-family: monospace;"></div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-info" data-dismiss="modal" style="font-family: monospace;">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade bd-example-modal-lg" id="modalTable" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+      <div class="modal-dialog" style="max-width: 70%;" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle" style="font-family: monospace; font-weight: bold;">Detail Information</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <table id="tableContent" style="font-family: monospace;">
+              <thead>
+                  <tr>
+                    <th>Title</th>
+                    <th>Host</th>
+                    <th>Viewers</th>
+                  </tr>
+              </thead>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-info" data-dismiss="modal" style="font-family: monospace;">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade bd-example-modal-lg" id="seleniumTable" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+      <div class="modal-dialog" style="max-width: 95%;" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle" style="font-family: monospace; font-weight: bold;">Detail Information</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <table
+              id="seletable"
+              style="font-family: monospace;">
+              <thead>
+                <tr>
+                  <th data-field="name_text">Title</th>
+                  <th data-field="host">Host</th>
+                  <th data-field="viewer">ViewCount</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-info" data-dismiss="modal" style="font-family: monospace;">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!--==========================
+    Header
+  ============================-->
+  <header id="header" class="header header-hide">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <h1 style="font-weight:bold;"><a href="#body" class="scrollto">WISHING POCKET</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="#body"><img src="img/logo.png" alt="" title="" /></a>-->
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li><a href="#hero">Home</a></li>
+          <li class="menu-has-children"><a href="#apiLogo">API</a>
+            <ul>
+              <li><a href="#apiData">Data Collection</a></li>
+            </ul>
+          </li>
+          <li class="menu-has-children"><a href="#ajaxLogo">AJAX</a>
+            <ul>
+              <li><a href="#beforeAfter">Before and After Comparison</a></li>
+              <li><a href="#pathComparison">Path Comparison Filter</a></li>
+              <li><a href="#responseContent">Response Content Filter</a></li>
+              <li><a href="#ajaxData">Data Collection</a></li>
+            </ul>
+          </li>
+          <li class="menu-has-children"><a href="#seleniumLogo">SELENIUM</a>
+            <ul>
+              <li><a href="#contentTags">Desired Content Tags</a></li>
+              <li><a href="#seleniumData">Data Collection</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+
+  <!--==========================
+    Hero Section
+  ============================-->
+  <section id="hero" class="wow fadeIn">
+    <div class="hero-container">
+      <img src="img/myIcon/title.svg" alt="Hero Imgs">
+      <a href="#apiLogo" class="btn-get-started scrollto">Get Started</a>
+      <!-- <div class="btns">
+        <a href="#"><i class="fa fa-apple fa-3x"></i> App Store</a>
+        <a href="#"><i class="fa fa-play fa-3x"></i> Google Play</a>
+        <a href="#"><i class="fa fa-windows fa-3x"></i> windows</a>
+      </div> -->
+    </div>
+  </section><!-- #hero -->
+
+<!--==========================
+    API logo
+  ============================-->
+  <section id="apiLogo" class="about-us padd-section wow fadeInUp">
+    <div class="container" style="max-width: 940pt;">
+      <div class="row justify-content-center">
+
+        <div class="col-md-5 col-lg-3">
+          <img src="img/myIcon/method/API.svg" alt="About">
+        </div>
+
+        <div class="col-md-7 col-lg-5">
+          <div class="about-content">
+
+            <h2>API Crawler method</h2>
+            <p>此方法以人工方式，觀察直播平台是否提供API，如Twitch平台的New Twitch API及YouTube 的YouTube Data API。若直播平台已提供API，則直接利用直播平台之API獲取直播數據。</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!--==========================
+    API Data collection
+  ============================-->
+  <section id="apiData" class="get-started padd-section text-center wow fadeInUp">
+
+    <div class="container">
+      <div class="section-title text-center">
+
+        <h2>API Data collection </h2>
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-6 col-lg-6">
+          <div class="feature-block">
+
+            <img src="img/myIcon/platform/youtube.svg" alt="img" class="img-fluid">
+            <h4>youtube live</h4>
+            <p>點擊 Show Data 可以看見抓取到的資料</p>
+            <a class="btn" data-toggle='modal' data-target='#seleniumTable' onclick="showSeleniumData('sampleYoutube')">Show Data</a>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-6">
+          <div class="feature-block">
+
+            <img src="img/myIcon/platform/twitch.svg" alt="img" class="img-fluid">
+            <h4>twitch live</h4>
+            <p>點擊 Show Data 可以看見抓取到的資料</p>
+            <a class="btn" data-toggle='modal' data-target='#seleniumTable' onclick="showSeleniumData('sampleTwitch')">Show Data</a>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+  
+  <!--==========================
+    Ajax logo
+  ============================-->
+  <section id="ajaxLogo" class="about-us padd-section wow fadeInUp">
+    <div class="container" style="max-width: 940pt;">
+      <div class="row justify-content-center">
+
+        <div class="col-md-5 col-lg-3">
+          <img src="img/myIcon/method/ajax.svg" alt="About">
+        </div>
+
+        <div class="col-md-7 col-lg-5">
+          <div class="about-content">
+
+            <h2>AJAX Crawler method</h2>
+            <p>此方法利用多數網頁使用AJAX (Asynchronous JavaScript and XML)技術動態加載內容的特點，透過監聽直播平台網頁後臺發送的Request，並從中過濾出傳遞直播數據資料的URL，以模仿網頁後臺發送Request的方式，獲取所需的直播數據。</p>
+
+            <ul class="list-unstyled">
+              <li><i class="fa fa-angle-right"></i>平台Request監聽</li>
+              <li><i class="fa fa-angle-right"></i>AJAX URL過濾</li>
+              <li><i class="fa fa-angle-right"></i>網頁爬取動作辨識</li>
+              <li><i class="fa fa-angle-right"></i>AJAX爬蟲系統</li>
+            </ul>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+    <!--==========================
+    Before and After Comparison
+  ============================-->
+
+
+  <section id="beforeAfter" class="pricing padd-section text-center wow fadeInUp">
+
+    <div class="container">
+      <div class="section-title text-center">
+
+        <h2>Before and After Comparison</h2>
+        <p class="separator">將經過Type過濾得到的List1和List2進行比對，過濾出List1和List2的差集，即可得到透過模擬器動作後才產生的URL。</p>
+
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-md-6 col-lg-4">
+          <div class="block-pricing">
+            <div class="table">
+              <h4>bilibili Live</h4>
+              <img src="img/myIcon/platform/bilibili.svg" alt="img" class="img-fluid">
+              <ul class="list-unstyled">
+                <li>https://api.live.bilibili.com/room/v1/room/get_user_recommend?page=2</li>
+                <li>https://api.live.bilibili.com/area/dynamic?area=all</li>
+                <li>https://api.live.bilibili.com/room/v1/room/get_user_recommend?page=3</li>
+                <li>-</li>
+                <li>-</li>
+              </ul>
+              <div class="table_btn">
+                <a class="btn" data-toggle='modal' data-target='#exampleModalLong' onclick=showContent(bilibili_beforeAfter)>Check More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="block-pricing">
+            <div class="table">
+              <h4>douyu Live</h4>
+              <img src="img/myIcon/platform/douyu.svg" alt="img" class="img-fluid">
+              <ul class="list-unstyled">
+                <li>https://www.douyu.com/room/follow/check/4238637</li>
+                <li>https://passport.douyu.com/lapi/passport/iframe/safeAuth?client_id=93&did=&t=1588422883987&callback=jsonp_1588422883987_22213</li>
+                <li>https://www.douyu.com/ggwapi/rnc/mgeticon10?rids=1719183,7129236,142488,221741,3984748,72751&client_sys=web</li>
+                <li>https://www.douyu.com/ggwapi/rnc/mgeticon10?rids=2433239,4372875,3284257,2314338,4918532,7743668,6212206,2205764&client_sys=web</li>
+                <li>https://www.douyu.com/japi/bdrcm/apinc/searchWordRec</li>
+              </ul>
+              <div class="table_btn">
+                <a class="btn" data-toggle='modal' data-target='#exampleModalLong' onclick=showContent(douyu_beforeAfter)>Check More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="block-pricing">
+            <div class="table">
+              <h4>huajiao Live</h4>
+              <img src="img/myIcon/platform/huajiao.svg" alt="img" class="img-fluid">
+              <ul class="list-unstyled">
+                <li>https://webh.huajiao.com/live/listcategory?_callback=jQuery1102046139560728850193_1588423822252&cateid=1000&offset=50&nums=20&fmt=jsonp&_=1588423822254</li>
+                <li>https://webh.huajiao.com/live/listcategory?_callback=jQuery1102046139560728850193_1588423822252&cateid=1000&offset=70&nums=20&fmt=jsonp&_=1588423822255</li>
+                <li>-</li>
+                <li>-</li>
+                <li>-</li>
+              </ul>
+              <div class="table_btn">
+                <a class="btn" data-toggle='modal' data-target='#exampleModalLong' onclick=showContent(huajiao_beforeAfter)>Check More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <br>
+
+      <div class="row">
+
+        <div class="col-md-6 col-lg-4">
+          <div class="block-pricing">
+            <div class="table">
+              <h4>ink Live</h4>
+              <img src="img/myIcon/platform/ink.svg" alt="img" class="img-fluid">
+              <ul class="list-unstyled">
+                <li>http://www.inke.cn/hotlive_list.html?page=2</li>
+                <li>http://www.inke.cn/hotlive_list.html?page=3</li>
+                <li>-</li>
+                <li>-</li>
+                <li>-</li>
+              </ul>
+              <div class="table_btn">
+                <a class="btn" data-toggle='modal' data-target='#exampleModalLong' onclick=showContent(ink_beforeAfter)>Check More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="block-pricing">
+            <div class="table">
+              <h4>zhanqi Live</h4>
+              <img src="img/myIcon/platform/zhanqi.svg" alt="img" class="img-fluid">
+              <ul class="list-unstyled">
+                <li>https://www.zhanqi.tv/api/static/v2.1/live/list/20/3.json</li>
+                <li>https://www.zhanqi.tv/api/static/v2.1/live/list/20/4.json</li>
+                <li>https://www.zhanqi.tv/api/static/v2.1/live/list/20/2.json</li>
+                <li>-</li>
+                <li>-</li>
+              </ul>
+              <div class="table_btn">
+                <a class="btn" data-toggle='modal' data-target='#exampleModalLong' onclick=showContent(zhanqi_beforeAfter)>Check More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="block-pricing">
+            <div class="table">
+              <h4>huya Live</h4>
+              <img src="img/myIcon/platform/huya.svg" alt="img" class="img-fluid">
+              <ul class="list-unstyled">
+                <li>https://metric.huya.com/?ts=1588423103768</li>
+                <li>https://udblgn.huya.com/proxy.html</li>
+                <li>https://www.huya.com/cache.php?m=LiveList&do=getLiveListByPage&tagAll=0&page=2</li>
+                <li>https://cdnweb.huya.com/getUidsDomainList?callback=getLiveStreamDomainCallback_1542219045&client_uid=0&gid=&huya_ua=web&anchor_uid=1259517692680,352961616,1620912493,1080469851,1666208523,1610847180,7223465,60006210,2274093904,175283017</li>
+                <li>https://cdnweb.huya.com/getUidsDomainList?callback=getLiveStreamDomainCallback_1400253968&client_uid=0&gid=&huya_ua=web&anchor_uid=1199535281869,1016605197,1199517454001,2285232959,2396689709,20320130,1861606916,718669953,1199518269910,1687773491</li>
+              </ul>
+              <div class="table_btn">
+                <a class="btn" data-toggle='modal' data-target='#exampleModalLong' onclick=showContent(huya_beforeAfter)>Check More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <br>
+      <div class="row">
+
+        <div class="col-md-6 col-lg-4">
+          <div class="block-pricing">
+            <div class="table">
+              <h4>penguin Live</h4>
+              <img src="img/myIcon/platform/egame.svg" alt="img" class="img-fluid">
+              <ul class="list-unstyled">
+                <li>https://share.egame.qq.com/cgi-bin/pgg_live_async_fcgi?param={\"key\":{\"module\":\"pgg_live_read_ifc_mt_svr\",\"method\":\"get_pc_live_list\",\"param\":{\"appid\":\"hot\",\"page_num\":2,\"page_size\":40,\"tag_id\":0,\"tag_id_str\":\"\"}}}&app_info={\"platform\":4,\"terminal_type\":2,\"egame_id\":\"egame_official\",\"imei\":\"\",\"version_code\":\"9.9.9.9\",\"version_name\":\"9.9.9.9\",\"ext_info\":{\"_qedj_t\":\"\",\"ALG-flag_type\":\"\",\"ALG-flag_pos\":\"\"},\"pvid\":\"672094208020050220\"}&g_tk=&pgg_tk=&tt=1&_t=1588423998979</li>
+                <li>https://share.egame.qq.com/cgi-bin/pgg_live_async_fcgi?param={\"key\":{\"module\":\"pgg_live_read_ifc_mt_svr\",\"method\":\"get_pc_live_list\",\"param\":{\"appid\":\"hot\",\"page_num\":3,\"page_size\":40,\"tag_id\":0,\"tag_id_str\":\"\"}}}&app_info={\"platform\":4,\"terminal_type\":2,\"egame_id\":\"egame_official\",\"imei\":\"\",\"version_code\":\"9.9.9.9\",\"version_name\":\"9.9.9.9\",\"ext_info\":{\"_qedj_t\":\"\",\"ALG-flag_type\":\"\",\"ALG-flag_pos\":\"\"},\"pvid\":\"672094208020050220\"}&g_tk=&pgg_tk=&tt=1&_t=1588424000328</li>
+                <li>-</li>
+                <li>-</li>
+                <li>-</li>
+              </ul>
+              <div class="table_btn">
+                <a class="btn" data-toggle='modal' data-target='#exampleModalLong' onclick=showContent(penguin_beforeAfter)>Check More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+    </div>
+
+  </section>
+
+  <!--==========================
+   path comparison filter
+  ============================-->
+
+
+  <section id="pathComparison" class="pricing padd-section text-center wow fadeInUp">
+
+    <div class="container">
+      <div class="section-title text-center">
+
+        <h2>path comparison filter </h2>
+        <p class="separator">利用多數Target URL含有相同URL path的特性，將剩下的URL中，URL path只出現過一次的濾除，最終剩下的即為欲得到的Target URL。</p>
+
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-md-6 col-lg-4">
+          <div class="block-pricing">
+            <div class="table">
+              <h4>bilibili Live</h4>
+              <img src="img/myIcon/platform/bilibili.svg" alt="img" class="img-fluid">
+              <ul class="list-unstyled">
+                <li>https://api.live.bilibili.com/room/v1/room/get_user_recommend?page=2</li>
+                <li>https://api.live.bilibili.com/room/v1/room/get_user_recommend?page=3</li>
+                <li>-</li>
+              </ul>
+              <div class="table_btn">
+                <a class="btn" data-toggle='modal' data-target='#exampleModalLong' onclick=showContent(bilibili_pathComparison)>Check More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="block-pricing">
+            <div class="table">
+              <h4>douyu Live</h4>
+              <img src="img/myIcon/platform/douyu.svg" alt="img" class="img-fluid">
+              <ul class="list-unstyled">
+                <li>-</li>
+                <li>-</li>
+                <li>-</li>
+              </ul>
+              <div class="table_btn">
+                <a class="btn" data-toggle='modal' data-target='#exampleModalLong' onclick=showContent(douyu_pathComparison)>Check More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="block-pricing">
+            <div class="table">
+              <h4>huajiao Live</h4>
+              <img src="img/myIcon/platform/huajiao.svg" alt="img" class="img-fluid">
+              <ul class="list-unstyled">
+                <li>https://webh.huajiao.com/live/listcategory?_callback=jQuery1102046139560728850193_1588423822252&cateid=1000&offset=50&nums=20&fmt=jsonp&_=1588423822254</li>
+                <li>https://webh.huajiao.com/live/listcategory?_callback=jQuery1102046139560728850193_1588423822252&cateid=1000&offset=70&nums=20&fmt=jsonp&_=1588423822255</li>
+                <li>-</li>
+              </ul>
+              <div class="table_btn">
+                <a class="btn" data-toggle='modal' data-target='#exampleModalLong' onclick=showContent(huajiao_pathComparison)>Check More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <br>
+
+      <div class="row">
+
+        <div class="col-md-6 col-lg-4">
+          <div class="block-pricing">
+            <div class="table">
+              <h4>ink Live</h4>
+              <img src="img/myIcon/platform/ink.svg" alt="img" class="img-fluid">
+              <ul class="list-unstyled">
+                <li>http://www.inke.cn/hotlive_list.html?page=2</li>
+                <li>http://www.inke.cn/hotlive_list.html?page=3</li>
+                <li>-</li>
+              </ul>
+              <div class="table_btn">
+                <a class="btn" data-toggle='modal' data-target='#exampleModalLong' onclick=showContent(ink_pathComparison)>Check More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="block-pricing">
+            <div class="table">
+              <h4>zhanqi Live</h4>
+              <img src="img/myIcon/platform/zhanqi.svg" alt="img" class="img-fluid">
+              <ul class="list-unstyled">
+                <li>-</li>
+                <li>-</li>
+                <li>-</li>
+              </ul>
+              <div class="table_btn">
+                <a class="btn" data-toggle='modal' data-target='#exampleModalLong' onclick=showContent(zhanqi_pathComparison)>Check More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="block-pricing">
+            <div class="table">
+              <h4>huya Live</h4>
+              <img src="img/myIcon/platform/huya.svg" alt="img" class="img-fluid">
+              <ul class="list-unstyled">
+                <li>https://www.huya.com/cache.php?m=LiveList&do=getLiveListByPage&tagAll=0&page=2</li>
+                <li>https://www.huya.com/cache.php?m=LiveList&do=getLiveListByPage&tagAll=0&page=3</li>
+                <li>-</li>
+              </ul>
+              <div class="table_btn">
+                <a class="btn" data-toggle='modal' data-target='#exampleModalLong' onclick=showContent(huya_pathComparison)>Check More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <br>
+      <div class="row">
+
+        <div class="col-md-6 col-lg-4">
+          <div class="block-pricing">
+            <div class="table">
+              <h4>penguin Live</h4>
+              <img src="img/myIcon/platform/egame.svg" alt="img" class="img-fluid">
+              <ul class="list-unstyled">
+                <li>https://share.egame.qq.com/cgi-bin/pgg_live_async_fcgi?param={\"key\":{\"module\":\"pgg_live_read_ifc_mt_svr\",\"method\":\"get_pc_live_list\",\"param\":{\"appid\":\"hot\",\"page_num\":2,\"page_size\":40,\"tag_id\":0,\"tag_id_str\":\"\"}}}&app_info={\"platform\":4,\"terminal_type\":2,\"egame_id\":\"egame_official\",\"imei\":\"\",\"version_code\":\"9.9.9.9\",\"version_name\":\"9.9.9.9\",\"ext_info\":{\"_qedj_t\":\"\",\"ALG-flag_type\":\"\",\"ALG-flag_pos\":\"\"},\"pvid\":\"672094208020050220\"}&g_tk=&pgg_tk=&tt=1&_t=1588423998979</li>
+                <li>https://share.egame.qq.com/cgi-bin/pgg_live_async_fcgi?param={\"key\":{\"module\":\"pgg_live_read_ifc_mt_svr\",\"method\":\"get_pc_live_list\",\"param\":{\"appid\":\"hot\",\"page_num\":3,\"page_size\":40,\"tag_id\":0,\"tag_id_str\":\"\"}}}&app_info={\"platform\":4,\"terminal_type\":2,\"egame_id\":\"egame_official\",\"imei\":\"\",\"version_code\":\"9.9.9.9\",\"version_name\":\"9.9.9.9\",\"ext_info\":{\"_qedj_t\":\"\",\"ALG-flag_type\":\"\",\"ALG-flag_pos\":\"\"},\"pvid\":\"672094208020050220\"}&g_tk=&pgg_tk=&tt=1&_t=1588424000328</li>
+                <li>-</li>
+              </ul>
+              <div class="table_btn">
+                <a class="btn" data-toggle='modal' data-target='#exampleModalLong' onclick=showContent(penguin_pathComparison)>Check More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+    </div>
+
+  </section>
+
+    <!--==========================
+   Response Content filter
+  ============================-->
+
+
+  <section id="responseContent" class="pricing padd-section text-center wow fadeInUp">
+
+    <div class="container">
+      <div class="section-title text-center">
+
+        <h2>Response Content filter</h2>
+        <p class="separator" style="margin-right: auto; margin-left: auto; padding-right: 15px; padding-left: 15px; width: 100%; max-width: 1160px;">少部分Target URL的URL path不同，無法通過上一層的Path比對過濾。此時再次取用動作前後比對過濾後的結果，進行Response內容過濾。此過濾方式會對可能的Target URL進行Request，將得到之Response進行Parse，檢查內容是否符合直播數據的儲存格式，若不符合則被濾除，最終剩下的即為欲得到的Target URL。</p>
+
+      </div>
+    </div>
+
+    <div class="container" style="margin-right: auto; margin-left: auto; padding-right: 15px; padding-left: 15px; width: 100%; max-width: 1160px;">
+
+      <div class="row">
+
+        <div class="col-md-6 col-lg-6">
+          <div class="block-pricing">
+            <div class="table">
+              <h4>zhanqi Live</h4>
+              <img src="img/myIcon/platform/zhanqi.svg" alt="img" class="img-fluid">
+              <ul class="list-unstyled">
+                <li>https://www.zhanqi.tv/api/static/v2.1/live/list/20/3.json</li>
+                <li>https://www.zhanqi.tv/api/static/v2.1/live/list/20/4.json</li>
+                <li>https://www.zhanqi.tv/api/static/v2.1/live/list/20/2.json</li>
+              </ul>
+              <div class="table_btn">
+                <a class="btn" data-toggle='modal' data-target='#exampleModalLong' onclick=showContent(zhanqi_responseContent)>Check More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-6">
+          <div class="block-pricing">
+            <div class="table">
+              <h4>douyu Live</h4>
+              <img src="img/myIcon/platform/douyu.svg" alt="img" class="img-fluid">
+              <ul class="list-unstyled">
+                <li>-</li>
+                <li>-</li>
+                <li>-</li>
+              </ul>
+              <div class="table_btn">
+                <a class="btn" data-toggle='modal' data-target='#exampleModalLong' onclick=showContent(douyu_responseContent)>Check More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!--==========================
+    ajax Data collection
+  ============================-->
+  <section id="ajaxData" class="get-started padd-section text-center wow fadeInUp">
+
+    <div class="container">
+      <div class="section-title text-center">
+
+        <h2>AJAX Data collection </h2>
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-block">
+
+            <img src="img/myIcon/platform/bilibili.svg" alt="img" class="img-fluid">
+            <h4>bilibili live</h4>
+            <p>點擊 Part of Data 可以看見 Title、Host、Viewers。</p>
+            <a class="btn" data-toggle='modal' data-target='#seleniumTable' onclick="showSeleniumData('sampleBili')">Show Data</a>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-block">
+
+            <img src="img/myIcon/platform/huya.svg" alt="img" class="img-fluid">
+            <h4>huya live</h4>
+            <p>點擊 Part of Data 可以看見 Title、Host、Viewers。</p>
+            <a class="btn" data-toggle='modal' data-target='#seleniumTable' onclick="showSeleniumData('sampleHuya')">Show Data</a>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-block">
+
+            <img src="img/myIcon/platform/zhanqi.svg" alt="img" class="img-fluid">
+            <h4>zhanqi live</h4>
+            <p>點擊 Part of Data 可以看見 Title、Host、Viewers。</p>
+            <a class="btn" data-toggle='modal' data-target='#seleniumTable' onclick="showSeleniumData('sampleZhanqi')">Show Data</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!--==========================
+    Selenium Logo
+  ============================-->
+  <section id="seleniumLogo" class="about-us padd-section wow fadeInUp">
+    <div class="container" style="max-width: 940pt;">
+      <div class="row justify-content-center">
+
+        <div class="col-md-5 col-lg-3">
+          <img src="img/myIcon/method/selenium.svg" alt="About">
+        </div>
+
+        <div class="col-md-7 col-lg-5">
+          <div class="about-content">
+
+            <h2>Selenium method</h2>
+            <p>此方法將建立一個用於網頁解析的模板，透過Selenium Crawler與自動化方式產生各直播平台的解析參數檔案(Parameter File)，套用至解析模板使其從直播網頁解析出所需的數據。</p>
+
+            <ul class="list-unstyled">
+              <li><i class="fa fa-angle-right"></i>自動化產生各直播平台解析參數檔案</li>
+              <li><i class="fa fa-angle-right"></i>直播網頁版本更新狀況處理</li>
+            </ul>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!--==========================
+   Desired Content Tgs
+  ============================-->
+
+
+  <section id="contentTags" class="pricing padd-section text-center wow fadeInUp">
+
+    <div class="container">
+      <div class="section-title text-center">
+
+        <h2>Desired Content Tags</h2>
+        <p class="separator" style="margin-right: auto; margin-left: auto; padding-right: 15px; padding-left: 15px; width: 100%; max-width: 1160px;">顯示Desired Content Tags</p>
+
+      </div>
+    </div>
+
+    <div class="container" style="margin-right: auto; margin-left: auto; padding-right: 15px; padding-left: 15px; width: 100%; max-width: 1160px;">
+
+      <div class="row">
+        <div class="col-md-6 col-lg-4">
+          <div class="block-pricing">
+            <div class="table">
+              <h4>bilibili Live</h4>
+              <img src="img/myIcon/platform/bilibili.svg" alt="img" class="img-fluid">
+              <ul class="list-unstyled">
+              </ul>
+              <div class="table_btn">
+                <a class="btn" data-toggle='modal' data-target='#seleniumTable' onclick="showSeleniumData('nodeDesired_BL')">Show Data</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="block-pricing">
+            <div class="table">
+              <h4>douyu Live</h4>
+              <img src="img/myIcon/platform/douyu.svg" alt="img" class="img-fluid">
+              <ul class="list-unstyled">
+              </ul>
+              <div class="table_btn">
+                <a class="btn" data-toggle='modal' data-target='#seleniumTable' onclick="showSeleniumData('nodeDesired_DY')">Show Data</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="block-pricing">
+            <div class="table">
+              <h4>huajiao Live</h4>
+              <img src="img/myIcon/platform/huajiao.svg" alt="img" class="img-fluid">
+              <ul class="list-unstyled">
+              </ul>
+              <div class="table_btn">
+                <a class="btn" data-toggle='modal' data-target='#seleniumTable' onclick="showSeleniumData('nodeDesired_HJ')">Show Data</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-6 col-lg-4">
+          <div class="block-pricing">
+            <div class="table">
+              <h4>ink Live</h4>
+              <img src="img/myIcon/platform/ink.svg" alt="img" class="img-fluid">
+              <ul class="list-unstyled">
+              </ul>
+              <div class="table_btn">
+                <a class="btn" data-toggle='modal' data-target='#seleniumTable' onclick="showSeleniumData('nodeDesired_IK')">Show Data</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="block-pricing">
+            <div class="table">
+              <h4>zhanqi Live</h4>
+              <img src="img/myIcon/platform/zhanqi.svg" alt="img" class="img-fluid">
+              <ul class="list-unstyled">
+              </ul>
+              <div class="table_btn">
+                <a class="btn" data-toggle='modal' data-target='#seleniumTable' onclick="showSeleniumData('nodeDesired_ZQ')">Show Data</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="block-pricing">
+            <div class="table">
+              <h4>huya Live</h4>
+              <img src="img/myIcon/platform/huya.svg" alt="img" class="img-fluid">
+              <ul class="list-unstyled">
+              </ul>
+              <div class="table_btn">
+                <a class="btn" data-toggle='modal' data-target='#seleniumTable' onclick="showSeleniumData('nodeDesired_HY')">Show Data</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-6 col-lg-4">
+          <div class="block-pricing">
+            <div class="table">
+              <h4>penguin Live</h4>
+              <img src="img/myIcon/platform/egame.svg" alt="img" class="img-fluid">
+              <ul class="list-unstyled">
+              </ul>
+              <div class="table_btn">
+                <a class="btn" data-toggle='modal' data-target='#seleniumTable' onclick="showSeleniumData('nodeDesired_EG')">Show Data</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!--==========================
+    Selenium Data collection
+  ============================-->
+  <section id="seleniumData" class="get-started padd-section text-center wow fadeInUp">
+
+    <div class="container">
+      <div class="section-title text-center">
+
+        <h2>Selenium Data collection</h2>
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-block">
+
+            <img src="img/myIcon/platform/bilibili.svg" alt="img" class="img-fluid">
+            <h4>bilibili live</h4>
+            <p>點擊 Show Data 可以看見抓取到的資料</p>
+            <a class="btn" data-toggle='modal' data-target='#seleniumTable' onclick="showSeleniumData('sampleData_BL')">Show Data</a>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-block">
+
+            <img src="img/myIcon/platform/douyu.svg" alt="img" class="img-fluid">
+            <h4>douyu live</h4>
+            <p>點擊 Show Data 可以看見抓取到的資料</p>
+            <a class="btn" data-toggle='modal' data-target='#seleniumTable' onclick="showSeleniumData('sampleData_DY')">Part of Data</a>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-block">
+
+            <img src="img/myIcon/platform/huajiao.svg" alt="img" class="img-fluid">
+            <h4>huajiao live</h4>
+            <p>點擊 Show Data 可以看見抓取到的資料</p>
+            <a class="btn" data-toggle='modal' data-target='#seleniumTable' onclick="showSeleniumData('sampleData_HJ')">Part of Data</a>
+          </div>
+        </div>
+
+      </div>
+      <br>
+      <div class="row">
+
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-block">
+
+            <img src="img/myIcon/platform/ink.svg" alt="img" class="img-fluid">
+            <h4>ink live</h4>
+            <p>點擊 Show Data 可以看見抓取到的資料</p>
+            <a class="btn" data-toggle='modal' data-target='#seleniumTable' onclick="showSeleniumData('sampleData_IK')">Show Data</a>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-block">
+
+            <img src="img/myIcon/platform/zhanqi.svg" alt="img" class="img-fluid">
+            <h4>zhanqi live</h4>
+            <p>點擊 Show Data 可以看見抓取到的資料</p>
+            <a class="btn" data-toggle='modal' data-target='#seleniumTable' onclick="showSeleniumData('sampleData_ZQ')">Part of Data</a>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-block">
+
+            <img src="img/myIcon/platform/huya.svg" alt="img" class="img-fluid">
+            <h4>huya live</h4>
+            <p>點擊 Show Data 可以看見抓取到的資料</p>
+            <a class="btn" data-toggle='modal' data-target='#seleniumTable' onclick="showSeleniumData('sampleData_HY')">Part of Data</a>
+          </div>
+        </div>
+
+      </div>
+      <br>
+      <div class="row">
+
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-block">
+
+            <img src="img/myIcon/platform/egame.svg" alt="img" class="img-fluid">
+            <h4>penguin live</h4>
+            <p>點擊 Show Data 可以看見抓取到的資料</p>
+            <a class="btn" data-toggle='modal' data-target='#seleniumTable' onclick="showSeleniumData('sampleData_EG')">Show Data</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!--==========================
+    Team Section
+  ============================-->
+  <section id="team" class="padd-section text-center wow fadeInUp">
+
+    <div class="container">
+      <div class="section-title text-center">
+
+        <h2>Team Member</h2>
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-6 col-md-4 col-lg-3">
+          
+        </div>
+
+       <div class="col-md-6 col-md-4 col-lg-3">
+          <div class="team-block bottom">
+            <img src="img/vivi.gif" class="img-responsive" alt="img">
+            <div class="team-content">
+              <ul class="list-unstyled">
+              </ul>
+              <span>Team Member</span>
+              <h4>HuiWen Cheng</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-md-4 col-lg-3">
+          <div class="team-block bottom">
+            <img src="img/yenjie.gif" class="img-responsive" alt="img">
+            <div class="team-content">
+              <ul class="list-unstyled">
+              </ul>
+              <span>Team Member</span>
+              <h4>YenChieh Li</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-md-4 col-lg-3">
+         
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!--==========================
+    Footer
+  ============================-->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-6 col-md-4 col-lg-4"></div>
+
+        <div class="col-md-6 col-md-4 col-lg-4">
+          <div class="footer-logo">
+
+            <a class="navbar-brand" href="#">Wishing Pocket</a>
+            <p>本專題研究為建構一套自動化直播數據爬取系統，提出針對直播平台網頁的自動化數據提取方法，最終提供開源的直播數據歷史資料庫。​研究內容針對目前主流直播平台(YouTube、Twitch)及大陸熱門直播平台，利用網路爬蟲技術提供三套方法，並整合成一完整的自動化系統，進行直播數據的收集。研究結果顯示此系統能有效地爬取眾多平台的直播數據，並能應對網頁版本更新或網頁架構更改之問題。</p>
+
+          </div>
+        </div>
+
+        <div class="col-md-6 col-md-4 col-lg-4"></div>
+    </div>
+
+    <div class="copyrights">
+        <p>&copy; Copyrights eStartup. All rights reserved.</p>
+        <div class="credits">
+          <!--
+            All the links in the footer should remain intact.
+            You can delete the links only if you purchased the pro version.
+            Licensing information: https://bootstrapmade.com/license/
+            Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=eStartup
+          -->
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+    </div>
+
+  </footer>
+
+
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/modal-video/js/modal-video.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.16.0/bootstrap-table.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1 @@
+{"pic_data-original":["pic","data-original"],"image":["pic","src"],"title":["title","text"],"tag-right_text":["tag-right","text"],"avatar,fl_text":["avatar,fl","text"],"category":["game-type,fr","text"],"viewer":["num","text"],"block":"game-live-item"}
