@@ -5,21 +5,7 @@ import json
 import time, random, datetime
 
 
-DEVELOPER_KEY = ["AIzaSyCIHZWjStQyFZsA9UaPPEC1HR72gy1_5M0", 
-				"AIzaSyCpc0J_A3_4wlLiFc31WvYOiLzNx6bTVlk",
-				"AIzaSyDw_ofbGj8jCofOiJaaeisNXLT1-yU2wAQ",
-				 "AIzaSyBQ2FQlwyZsUEHEemWrSY17lIifLizZ4qs",
-				 "AIzaSyAID22LfccH2wkgVGrgvgshpPsx7-deJ_s",
-				 "AIzaSyC1s390y8Rdh68NV8K7lAEYcXE8EGV_4AA",
-				 "AIzaSyB8uSByVNplE27fbR3TsbZWKgIbyc10RK8",
-				 "AIzaSyBtnhE2iwxRh7CFpzXRIMs94eJ8s131VLs",
-				 "AIzaSyCUW6YTKw40QEAmf8ERKidkrGJkoUA7oQs",
-				 "AIzaSyCrgyIbmFvpQpgWeHwc3B49XnbmzY_12wM",
-				 "AIzaSyCE6L-s4Yf3yWCZof6So8UQBe6zf8xGlfY",
-				 "AIzaSyAQQE7Mowazlcz8aDXHT68AOZDSDXpqH0Q",
-				 "AIzaSyA_o0OoSBNO2plE3PZQTfyPL_wYZTU6hs4",
-				 "AIzaSyAFEUpTcdmyXas5pPMZudhC7UMy_nwA1rQ",
-				 "AIzaSyAq0N6UDSf_gCMFp-O1N7VcAQWfgqBJOR0"]
+DEVELOPER_KEY = []
 
 YOUTUBE_API_SERVICE_NAME = "youtube"
 YOUTUBE_API_VERSION = "v3"
