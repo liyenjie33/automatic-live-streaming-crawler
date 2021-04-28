@@ -5,7 +5,7 @@ import json
 import time, random, datetime
 
 
-DEVELOPER_KEY = []
+DEVELOPER_KEY = [your_youtube_key]
 
 YOUTUBE_API_SERVICE_NAME = "youtube"
 YOUTUBE_API_VERSION = "v3"
